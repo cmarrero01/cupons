@@ -1,0 +1,159 @@
+{{> header}}
+<div class="container bs-docs-container" id="body">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                <ul class="nav bs-sidenav">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9" role="main">
+            <div class="page-header">
+                <h1>Esta es la informacion de tu negocio</h1>
+            </div>
+            <p>
+                Aqui puedes completar y/o editar la informacion de tu negocio.
+            </p>
+            <form action="/myAccount/business/update" role="form" enctype="multipart/form-data" method="post" id="editBusiness">
+                <input type="hidden" name="accountId" value="{{accountId}}" id="accountId" />
+                <div class="form-group">
+                    <label for="name">Nombre de tu negocio:</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{business.name}}" placeholder="Nombre con el que se mostrara tu negocio">
+                </div>
+                <div class="form-group">
+                    <label for="name">Breve descripciòn:</label>
+                    <textarea class="form-control" cols="50" rows="5" name="description">{{business.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="">Categoria:</label>
+                    <select name="category" class="form-control" id="category">
+                        {{#business.categories}}
+                        <option value="{{_id}}">{{name}}</option>
+                        {{/business.categories}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefono:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" value="{{business.phone}}" placeholder="Ingresa un telefono">
+                    <label for="address">Direccion:</label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{business.address}}" placeholder="Direccion de tu negocio">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="hidden" name="lat" id="lat" value="{{business.location.1}}" />
+                            <input type="hidden" name="lon" id="lon" value="{{business.location.0}}" />
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-md-4">
+                           <!-- <div class="form-group">
+                                <label for="email">Email del negocio:</label>
+                                <input type="email" class="form-control" id="email" name="email" value="{{business.email}}" placeholder="Enter email">
+                            </div>-->
+                            <div class="form-group">
+                                <label for="web">Web (opcional):</label>
+                                <input type="text" class="form-control" id="web" name="web" value="{{business.web}}" placeholder="Web del negocio">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>Formas de pago</h3>
+                            <div class="checkbox">
+                                <label class="checkbox-inline" for="Visa">
+                                    <input type="checkbox" id="Visa" value="Visa" name="Visa" {{#business.mPayd.Visa}}checked="checked"{{/business.mPayd.Visa}} /> Visa
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Mastercard">
+                                    <input type="checkbox" id="Mastercard" value="Mastercard" name="Mastercard" {{#business.mPayd.Mastercard}}checked="checked"{{/business.mPayd.Mastercard}} /> Mastercard
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Maestro">
+                                    <input type="checkbox" id="Maestro" value="Maestro" name="Maestro" {{#business.mPayd.Maestro}}checked="checked"{{/business.mPayd.Maestro}} /> Maestro
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Nativa">
+                                    <input type="checkbox" id="Nativa" value="Nativa" name="Nativa" {{#business.mPayd.Nativa}}checked="checked"{{/business.mPayd.Nativa}} /> Nativa
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Efectivo">
+                                    <input type="checkbox" id="Efectivo" value="Efectivo" name="Efectivo" {{#business.mPayd.Efectivo}}checked="checked"{{/business.mPayd.Efectivo}} /> Efectivo
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="AmericanExpress">
+                                    <input type="checkbox" id="AmericanExpress" value="American Express" name="AmericanExpress" {{#business.mPayd.AmericanExpress}}checked="checked"{{/business.mPayd.AmericanExpress}} /> American Express
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Nevada">
+                                    <input type="checkbox" id="Nevada" value="Nevada" name="Nevada" {{#business.mPayd.Nevada}}checked="checked"{{/business.mPayd.Nevada}} /> Nevada
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label class="checkbox-inline"  for="Naranja">
+                                    <input type="checkbox" id="Naranja" value="Naranja" name="Naranja" {{#business.mPayd.Naranja}}checked="checked"{{/business.mPayd.Naranja}} /> Naranja
+                                </label>
+                            </div>
+                        </div>--><!-- /end col formas de pago -->
+                <div class="col-md-6">
+                    <h3>Redes sociales</h3>
+                    <div class="checkbox">
+                        <label class="checkbox-inline" for="Facebook">
+                            <input type="checkbox" id="Facebook" value="Facebook" name="Facebook" {{#business.social.facebook}}checked="checked"{{/business.social.facebook}} /> Facebook
+                            <input type="text" class="form-control facebookUrl" name="facebookUrl" value="{{business.social.facebook}}" {{^business.social.facebook}}style="display: none;"{{/business.social.facebook}} placeholder="Agregue aqui el enlace de su perfil de facebook" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Twitter">
+                            <input type="checkbox" id="Twitter" value="Twitter" name="Twitter" {{#business.social.twitter}}checked="checked"{{/business.social.twitter}} /> Twitter
+                            <input type="text" class="form-control twitterUrl" name="twitterUrl" value="{{business.social.twitter}}" {{^business.social.twitter}}style="display: none;"{{/business.social.twitter}} placeholder="Agregue aqui el enlace de su perfil de twitter" />
+                        </label>
+                    </div>
+                </div><!-- /end col social -->
+        </div><!-- /end row -->
+    </div><!-- /end from group -->
+    <div class="form-group">
+        <h3>Imagenes del negocio</h3>
+        <div class="form-group">
+            <label for="image">Subir imagen: (Solo extensiones .jpg o .bmp, no mayores a 80 x 80 px)</label>
+            <input type="file" id="image" name="image" />
+        </div>
+        <img src="{{#business.image}}{{business.image}}{{/business.image}}?cache={{cache}}{{^business.image}}http://placehold.it/200x150{{/business.image}}" alt="Tu imagen" class="img-thumbnail" id="businessImage" width="200">
+    </div>
+    <button type="submit" class="btn btn-default">Guardar Cambios</button>
+    </form>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        private.init('{{business.location.1}}','{{business.location.0}}');
+        $(document).delegate('#Facebook','click',function(){
+            var facebookUrl = $('.facebookUrl');
+            facebookUrl.slideToggle();
+            facebookUrl.val('');
+        });
+        $(document).delegate('#Twitter','click',function(){
+            var twitterUrl = $('.twitterUrl');
+            twitterUrl.slideToggle();
+            twitterUrl.val('');
+        });
+        $(document).delegate('#Gplus','click',function(){
+            var gplusUrl = $('.gplusUrl');
+            gplusUrl.slideToggle();
+            gplusUrl.val('');
+        });
+        $("#category>option[value={{business.categoryId}}]").prop("selected",true);
+    });
+</script>
+</div>
+{{> footer}}

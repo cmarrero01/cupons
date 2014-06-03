@@ -1,0 +1,41 @@
+{{> header}}
+<!-- CONTAINER -->
+<div class="container clearfix" id="body">
+    <div class="inner-content">
+
+        <div class="sub-nav clearfix">
+            <div class="title-cupones">Cupones de Hoy <span class="amount">{{count}}</span></div>
+            <div class="title-cupones top-pattern">Cupones de Hoy <span class="amount">{{count}}</span></div>
+            <div class="location"><a href="#"><img src="/static/img/location.png"></a></div>
+            <a class="tooltips" href="#"><img src="/static/img/location.png" title="Cambiar Ubicación">
+                <span>Cupones de Mendoza</span>
+            </a>
+        </div>
+
+        {{#ofertas}}
+        <div class="cupon">
+            <a href="/oferta/{{_id}}" class="theCupon" data-cuponid="{{_id}}">
+                <div class="image-container">
+                    <div class="image">
+                        <img src="/image/business/{{accountId}}/{{_id}}/cupon_110x110.jpg" alt="Imagen cupon" class="img-thumbnail" width="110" height="110">
+                    </div>
+                    <div class="circle-left"></div>
+                    <div class="coupon-amount last-coupon">
+                        Quedan {{quantity}}
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="restaurant-name">
+                        {{name}}
+                    </div>
+                    <div class="tarjetas">
+                        {{description}}
+                    </div>
+                </div>
+            </a>
+        </div><!-- end cupon-->
+        {{/ofertas}}
+    </div>
+</div>
+<!-- END CONTAINER -->
+{{> footer}}

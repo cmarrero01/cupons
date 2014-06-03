@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ilCupone</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/responsive.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <!-- HEADER -->
+        <div id="header">
+            <div id="header-center">
+                <div class="figure-wrapp">
+                    <div id="figure" class="left-figure">
+                        <a href="/">
+                            <img src="/static/img/logo.png" alt="ilCupone">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER -->
+
+        <!-- HEADER VISIBLE EN MOBILE SOLO EN EL INDEX -->
+        <div class="head-mobile">
+            <a href="/">
+                <img src="/static/img/logo.png" alt="ilCupone">
+            </a>
+        </div>
+        <!-- END HEADER VISIBLE EN MOBILE SOLO EN EL INDEX -->
+
+
+        <!-- CONTAINER -->
+        <div class="container clearfix top container-top">
+            <div class="box first-box">
+                <img src="/static/img/cupones.png">
+                <p>
+                    {{description.content}}
+                </p>
+            </div>
+            <div class="box middle middle-top">
+                <form class="form" action="/ofertas/0/10" method="GET" style="text-align: center;">
+                    <select class="selector">
+                        <option value="0">Mendoza</option>
+                    </select>
+                    <select name="category" class="selector">
+                        {{#categories}}
+                        <option value="{{name}}">{{name}}</option>
+                        {{/categories}}
+                    </select>
+                    <button type="submit" class="button">Buscar Cupón</button>
+                    <a href="#" class="terms">Terminos y condiciones</a>
+                </form>
+                <div class="type-top">
+                    <p>Busca y descarga tus cupones gratis y canjealos directamente desde tu smartphone, tablet o pc.</p>
+                </div>
+            </div>
+            <div class="foot-links-mobile">
+                <a href="/privacidad">Privacidad </a> / <a href="/legales"> Legales </a> / <a href="/contacto"> Contacto</a>
+            </div>
+
+            <!-- PANEL BOTTOM VISTA TABLET MOBILE -->
+            <div class="panel-bottom clearfix">
+                <div class="pattern-bottom"></div>
+                <div class="down-panel">
+                    <div class="panel-bottom-container">
+                        <div class="arrow-mobile"><a href="#loginForm"><img src="/static/img/arrow-mobile.png"></a></div>
+                        <h3>¿Tenés un comercio?</h3>
+                        <p class="subtitle-bottom">Registrate y publicá tus cupones.</p>
+                        <div class="beneficios-bottom">
+                            <p>
+                                Para las cadenas y marcas, ilcupone resulta una herramienta de marketing innovadora:
+                                ofrece una forma más rápida, eficaz y barata de usar cupones de descuento.
+                                La ventaja del programa permite que cualquier negocio o comercio empiece a usarlo sin necesidad de hacer inversiones
+                                en tecnología en su local ni tener que dar formación extra a sus empleados.
+                                Ganar visibilidad y exposición en la Web Social, por muy pequeño que seas o segmentando que sea tu negocio.
+                                A más visible, más oportunidades de ser encontrado y tener la opción de captar la atención del público
+                            </p>
+                        </div>
+                        {{error}}
+                        <div class="loginForm" id="loginForm">
+                            <form class="form-bottom" method="post" action="/login">
+                                <label>
+                                    <input class="campos-bottom" type="email" placeholder="Email" name="email">
+                                </label>
+                                <label>
+                                    <input class="campos-bottom" type="password" placeholder="Contraseña" name="password">
+                                </label>
+                                <button type="submit" class="button-bottom">Login</button>
+                            </form>
+                            <span class="login-bottom clearfix"><p>¿No tienes Usuario? <a href="#" class="toggleRegister">Registrate aquí!</a></p></span>
+                        </div>
+
+                        <div class="registerForm" style="display: none;">
+                            <form class="form-bottom" method="post" action="/register">
+                                <label>
+                                    <input class="campos-bottom" type="text" placeholder="Nombre personal" name="name">
+                                </label>
+                                <label>
+                                    <input class="campos-bottom" type="email" placeholder="Email" name="email">
+                                </label>
+                                <label>
+                                    <input class="campos-bottom" type="password" placeholder="Contraseña" name="password">
+                                </label>
+                                <button type="submit" class="button-bottom">Registrate</button>
+                            </form>
+                            <span class="login-bottom clearfix"><p>¿Ya tienes Usuario? <a href="#" class="toggleRegister">Inicia sesión aquí!</a></p></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END PANEL BOTTOM VISTA TABLET MOBILE -->
+            <div class="foot-links">
+                <a href="/privacidad">Privacidad </a> / <a href="/legales"> Legales </a> / <a href="/contacto"> Contacto</a>
+            </div>
+        </div>
+        <!-- END CONTAINER -->
+
+
+        <!-- PANEL RIGHT INDEX -->
+        <div class="right-panel">
+            <div class="pattern"></div>
+            <div class="panel">
+                <div class="panel-container">
+                    <h3>¿Tenés un comercio?</h3>
+                    <p class="subtitle">Registrate y publicá tus cupones.</p>
+                    <div class="beneficios">
+                        <p>
+                            Para las cadenas y marcas, ilcupone resulta una herramienta de marketing innovadora:
+                            ofrece una forma más rápida, eficaz y barata de usar cupones de descuento.
+                        </p>
+                    </div>
+                    {{error}}
+                    <div class="loginForm">
+                        <form class="form" method="post" action="/login">
+                            <label>
+                                <input class="campos" type="email" placeholder="Email" name="email">
+                            </label>
+                            <label>
+                                <input class="campos" type="password" placeholder="Contraseña" name="password">
+                            </label>
+                            <button type="submit" class="button">Login</button>
+                        </form>
+                        <span class="login clearfix"><p>¿No tienes Usuario? <a href="#" class="toggleRegister">Registrate aquí!</a></p></span>
+                    </div>
+
+                    <div class="registerForm" style="display: none">
+                        <form class="form" method="post" action="/register">
+                            <label>
+                                <input class="campos" type="text" placeholder="Nombre personal" name="name">
+                            </label>
+                            <label>
+                                <input class="campos" type="email" placeholder="Email" name="email">
+                            </label>
+                            <label>
+                                <input class="campos" type="password" placeholder="Contraseña" name="password">
+                            </label>
+                            <button type="submit" class="button">Registrate</button>
+                        </form>
+                        <span class="login clearfix"><p>¿Ya tienes Usuario? <a href="#" class="toggleRegister">Inicia sesión aquí!</a></p></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="terms" style="display: none;">
+            <h3>Al Público:</h3>
+            {{{tos.content}}}
+            <input type="button" class="terms button" value="CERRAR" />
+        </div>
+
+        <script src="/static/js/jquery-1.10.2.min.js"></script>
+        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>

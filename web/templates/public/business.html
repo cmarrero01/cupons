@@ -1,0 +1,79 @@
+{{> header}}
+<!-- CONTAINER -->
+<div class="container clearfix" id="body">
+    <div class="inner-content2">
+        <div class="top-pattern resto-top-cupon">
+            <span class="back-blue">
+                <a href="javascript:history.back(1)"><img src="/static/img/back-blue.png"></a>
+            </span>
+            <div class="title-menu-resto">
+                <p>{{business.name}}</p>
+            </div>
+        </div>
+        <div class="cupon-deploy margin-resto">
+            <div class="resto-info background-resto clearfix">
+                <div class="resto-title">
+                    {{business.name}}
+                </div>
+                <div class="resto-details">
+                    <div class="resto-img">
+                        <img src="/image/business/{{business.accountId}}/business_80x80.jpg" width="80" height="80">
+                    </div>
+                    <div class="resto-data">
+                        <p>{{business.address}}. Tel: {{business.phone}}</p>
+                        <a href="{{bussiness.web}}">{{business.web}}</a>
+                        <div class="social-channels">
+                            <a href="{{business.social.twitter}}"><div class="twitter"></div></a>
+                            <a href="{{business.social.facebook}}"><div class="facebook"></div></a>
+                            <!--<a href="{{business.social.google}}"><div class="gplus"></div></a>-->
+                        </div>
+                    </div>
+                    <!--<div class="medios-de-pago">
+                        <h4>Medios de Pago</h4>
+                        <img src="/static/img/efectivo.png">
+                        <img src="/static/img/visa.jpg">
+                        <img src="/static/img/master.jpg">
+                    </div>-->
+                </div>
+            </div>
+            <div class="cupon-info">
+                <div class="ubicacion">
+                    <h3>Ubicación</h3>
+                </div>
+                <div class="mapa" id="map">
+                    <img src="/static/img/mapa.jpg">
+                </div>
+            </div>
+            <div class="breve-descripcion">
+                <h3>Breve Descripción</h3>
+                <p>
+                {{business.description}}</p>
+            </div>
+
+        </div><!-- end cupon-deploy -->
+
+        <div class="box box-hidden">
+            {{> sidebar}}
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        //Mostramos el mapa
+        var map = new GMaps({
+            div: '#map',
+            lat: '{{business.location.1}}',
+            lng: '{{business.location.0}}',
+            zoom:16
+        });
+
+        map.addMarker({
+            lat: '{{business.location.1}}',
+            lng: '{{business.location.0}}',
+            title: '{{business.name}}'
+        });
+    });
+</script>
+<!-- END CONTAINER -->
+{{> footer}}

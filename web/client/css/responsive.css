@@ -1,0 +1,420 @@
+/* RESPONSIVE */
+
+@media (max-width: 1680px) {
+
+    .panel-container { padding: 15% 30px 15% 0; width: 65%; }
+    .campos { height: 30px; font-size: 18px; width: 92%; }
+    .login p { float: left; }
+}
+
+
+@media (max-width: 1280px) {
+
+    .panel-container { padding: 15% 30px 15% 0; width: 65%; }
+    .campos { height: 30px; font-size: 18px; width: 92%; }
+    .login p { float: left; }
+}
+
+@media (max-width: 1366px) {
+	.panel-container { padding: 15% 30px 15% 0; width: 65%; }
+    .campos { height: 30px; font-size: 18px; width: 92%; }
+    .login p { float: left; }
+	.container { margin-top: 30px; }
+	.foot-links { margin-top: 8%; }
+
+}
+
+@media (max-width: 1024px) {
+
+	.panel-container { padding: 15% 25px 15% 0; width: 80%; }
+    .campos { height: 30px; font-size: 18px; width: 92%; }
+    .login p { float: left; }
+	.container-top { margin-top: 83px; }
+		.middle { margin: 0 2%; margin-top: 50px; }
+		.cupon-middle { margin-top: 0; }
+		.location { display: block; float: right; }
+		a.tooltips { display: none; }
+
+	.pattern-footer { position: fixed; }
+	.foot-links { margin-top: 14%; margin-bottom: 20px; }
+	.last-box { display: none; }
+
+	.inner-content { width: 100%; }
+	.inner-content2 { width: 100%; }
+		.cupon { margin: 0 10px 10px 10px; }
+	.title-cupones { margin-left: 10px; }
+	.location { margin-right: 10px; }
+
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+	#header-center { width: 100%; }
+    .figure-wrapp { margin: 0 auto; width: 100%; }
+        #figure { height: 124px; width: 250px; margin: 0 auto; }
+
+	.container { width: 100%; margin: 20px 0 0 0; }
+		.box { width: 44%; margin: 0 4%; padding: 10px 0; }
+		.box-hidden { display: none; }
+		.box img { width: 100%; }
+		.tarjetas img { width: 45px; height: 29px; }
+		.cupon-middle { margin-top: 0; }
+		.middle { margin: 0; margin-top: 50px; }
+
+		.foot-links { background-color: #FFE1B6; border-top: 3px solid #FFC981;  margin: 0; text-align: center; padding: 15px 0; width: 100%; }
+
+	.right-panel { display: none; }
+
+	/* PANEL BOTTOM - TABLET */
+	.panel-bottom { display: block; float: left; position: relative; margin-top: 50px; width: 100%; }
+		.pattern-bottom { background: url(../img/pattern-bottom.png); background-repeat: repeat-x; background-position: top; height: 20px; float: left; width: 100%; }
+		.down-panel { background-color: #4AEAFF; width: 100%; float: left; height: 100%; top: 20px; }
+			.panel-bottom-container { margin: 0 auto; padding: 20px 5%; width: 75%; }
+				 p.subtitle-bottom { font-weight: 600 !important; margin: 10px 0; }
+				.beneficios-bottom { margin: 30px 0; }
+				.panel-bottom-container h3, .panel-bottom-container p, .panel-bottom-container a { color: #085577; text-shadow: 0 1px #A9FFFD; }
+		        .panel-bottom-container h3 { font-weight: 700; font-size: 23px; margin: 0; }
+		        .panel-bottom-container p { margin: 0; font-size: 15px; font-weight: 400;  }
+		        .panel-bottom-container a { font-weight: 700; text-decoration: none; }
+
+		    /* FORM */
+			.campos-bottom { background-color: #FFEAC8; border: 1px solid #EFBE70; }
+			.button-bottom, .campos-bottom { color: #A27C52; display: block; cursor: pointer; float: left; font-size: 18px; height: 40px; margin-bottom: 10px; padding: 5px 10px; width: 100%; }
+			.button-bottom { background-color: #FFDC9D; border: 1px solid #FFDC9D; border-bottom: 3px solid #FFC981; font-weight: 700; font-size: 20px; margin-top: 5px; text-shadow: 0 1px #FAF3E3; }
+			    .button-bottom:hover { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; }
+			    .button-bottom:active { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; color: #886239; position: relative; top: 2px; }
+
+			.campos-bottom { height: 30px; font-size: 18px; width: 96%; }
+			    .campos-bottom:focus { background-color: #FFE1B6; }
+
+			.login-bottom { float: left; margin: 25px 0 45px 0 !important; }
+			.location { margin-right: 30px; }
+
+			.navegation-center { margin: 20px auto; width: 100%; }
+		    .navegation-center ul { width: 760px; margin: 0 auto; }
+		        .navegation-center li a { margin: 10px 1px 0 1px; padding: 9px 10px; }
+
+	.pattern-footer { position: fixed; }
+
+
+	.cupon-deploy { width: 95%; margin-right: 0; }
+
+	.food-img { position: relative; }
+		.cupon-info { width: 49%; padding: 5px 0 0 10px; }
+		.cupon-info img { width: 100%; }
+		.cupon-code { width: 94%; margin-top: 4px; }
+	.over-img { right: 0; top: 110px; }
+	.social-channels { float: left; width: 100%; }
+	.medios-de-pago { margin: 25px 0 35px 0; }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    #header-center { width: 100%; }
+    .figure-wrapp { margin: 0 auto; width: 100%; }
+        #figure { height: 124px; width: 250px; margin: 0 auto; }
+
+	.container { width: 100%; margin: 20px 0 0 0; }
+		.box { width: 44%; margin: 0 4%; padding: 10px 0; }
+		.box-hidden { display: none; }
+		.box img { width: 100%; }
+		.tarjetas img { width: 45px; height: 29px; }
+		.cupon-middle { margin-top: 0 !important; }
+		.middle { margin: 0; margin-top: 50px; }
+
+		.foot-links { background-color: #FFE1B6; border-top: 3px solid #FFC981;  margin: 0; text-align: center; padding: 15px 0; width: 100%; }
+
+	.right-panel { display: none; }
+
+	/* PANEL BOTTOM - TABLET */
+	.panel-bottom { display: block; float: left; position: relative; margin-top: 50px; width: 100%; }
+		.pattern-bottom { background: url(../img/pattern-bottom.png); background-repeat: repeat-x; background-position: top; height: 20px; float: left; width: 100%; }
+		.down-panel { background-color: #4AEAFF; width: 100%; float: left; height: 100%; top: 20px; }
+			.panel-bottom-container { margin: 0 auto; padding: 20px 5%; width: 75%; }
+				 p.subtitle-bottom { font-weight: 600 !important; margin: 10px 0; }
+				.beneficios-bottom { margin: 30px 0; }
+				.panel-bottom-container h3, .panel-bottom-container p, .panel-bottom-container a { color: #085577; text-shadow: 0 1px #A9FFFD; }
+		        .panel-bottom-container h3 { font-weight: 700; font-size: 23px; margin: 0; }
+		        .panel-bottom-container p { margin: 0; font-size: 15px; font-weight: 400;  }
+		        .panel-bottom-container a { font-weight: 700; text-decoration: none; }
+
+		    /* FORM */
+			.campos-bottom { background-color: #FFEAC8; border: 1px solid #EFBE70; }
+			.button-bottom, .campos-bottom { color: #A27C52; display: block; cursor: pointer; float: left; font-size: 18px; height: 40px; margin-bottom: 10px; padding: 5px 10px; width: 100%; }
+			.button-bottom { background-color: #FFDC9D; border: 1px solid #FFDC9D; border-bottom: 3px solid #FFC981; font-weight: 700; font-size: 20px; margin-top: 5px; text-shadow: 0 1px #FAF3E3; }
+			    .button-bottom:hover { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; }
+			    .button-bottom:active { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; color: #886239; position: relative; top: 2px; }
+
+			.campos-bottom { height: 30px; font-size: 18px; width: 96%; }
+			    .campos-bottom:focus { background-color: #FFE1B6; }
+
+			.login-bottom { float: left; margin: 25px 0 45px 0 !important; }
+
+	/* CUPONES */
+	.title-cupones { margin-left: 50px; }
+	.location { margin-right: 60px; }
+
+	.navegation-center { margin: 20px auto; width: 530px; }
+	    .navegation-center ul { width: 760px; margin: 0 auto; }
+	        .navegation-center li a { margin: 10px 1px 0 1px; padding: 9px 15px; }
+
+	.inner-content { width: 700px; margin: 0 auto; }
+	.inner-content2 { width: 700px; margin: 0 auto; }
+	.cupon { margin: 0 15px 10px 15px; }
+
+	.cupon-deploy { width: 95%; margin-right: 0; }
+
+	.food-img { position: relative; }
+		.cupon-info { width: 49%; padding: 5px 0 0 10px; }
+		.cupon-info img { width: 100%; }
+		.cupon-code { width: 94%; margin-top: 4px; }
+	.over-img { right: 0; top: 110px; }
+
+
+}
+
+
+@media (max-width: 480px) {
+
+	body { padding-bottom: 0; }
+
+	#header { display: none; }
+	.navegation { display: none; }
+
+	.head-mobile { display: block; background: url(../img/pattern.png ); background-position: top; background-repeat: repeat-x; height: 160px; width: 100%; text-align: center; }
+
+	/* NAVIGATION VISIBLE IN MOBILE */
+	.nav-mobile { display: block; padding: 5px 15px; border-bottom: 2px solid #fff; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+		background: rgba(255,255,255,1);
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(222,222,222,1)));
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dedede', GradientType=0 ); }
+
+	.collapse-mobile, .collapse-location { background: url(../img/pattern-footer.png) #F9F2E2; background-position: bottom; background-repeat: repeat-x;
+		left: 0; right: 0; bottom: 0; top: 47px; position: fixed; z-index: 99999; }
+
+	ul.collapse-nav { list-style: none; margin: 35px auto 0 auto; width: 90%; }
+	.collapse-nav li a { display: block; color: #949494; font-size: 22px; font-weight: 600; border-bottom: 1px dashed #D3B699; text-shadow: 0 2px #fff;
+		text-decoration: none; text-transform: uppercase; padding: 10px; }
+	.collapse-nav li a:hover { background-color: #EFE8DC; }
+	.collapse-nav li a:active { color: #828181; background-color: #EAE4D8; }
+
+		.icon-home { background: url(../img/home.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-help { background: url(../img/help.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-contact { background: url(../img/contacto.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-privacy { background: url(../img/privacy.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-legal { background: url(../img/legal.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+
+		.back-blue a img { margin: 5px 0 0 15px; }
+		.title-menu { margin-left: 33%; }
+		.title-menu2 { margin-left: 28%; }
+		.nav-right { float: right; }
+
+	form.form-mobile { margin-top: 40px; border-bottom: 1px dashed #D3B699; border-top: 1px dashed #D3B699; padding: 20px 0; }
+	/* END NAVIGATION VISIBLE IN MOBILE */
+
+
+
+	.title-cupones { font-size: 16px; line-height: 2.5; margin-top: 0; margin-left: 0; position: fixed; top: 47px; text-align: center; z-index: 9999; }
+	.amount { font-size: 16px; margin-left: 10px; border-radius: 25%; padding: 1px 8px; }
+
+
+	.location { display: none; }
+
+	.container { margin-top: 0; }
+	.first-box { display: none; }
+	.box { width: 90%; margin-left: 5%; }
+		.button { margin-bottom: 0; }
+		.type-top p { margin-top: 10px; font-size: 13px; }
+	.campos-bottom { height: 30px; font-size: 18px; width: 92%; }
+	.middle { margin-top: 0; }
+
+	.panel-bottom { margin-top: 0; }
+		.panel-bottom-container { width: 90%; padding-top: 10px; text-align: left; }
+		.panel-bottom-container h3 { font-size: 20px }
+		p.subtitle-bottom { font-size: 13px; font-weight: 700; padding-top: 0 !important; }
+		.arrow-mobile { display: block; right: 5%; top: 40px; position: absolute; }
+
+			.beneficios-bottom { text-align: center; }
+			.beneficios-bottom p { font-size: 13px; margin-top: 25px; font-weight: 400 !important; }
+
+	.foot-links { display: none; }
+
+	.foot-links-mobile { color: #959595; clear: both; display: block; font-weight: 700; margin: 10px 0 20px 0; text-align: center; text-shadow: 0 1px #fff; width: 100%; }
+	    .foot-links-mobile a { color: #959595; font-size: 13px; text-shadow: 0 1px #fff; text-decoration: none; margin: 0 3px; }
+	    .foot-links-mobile a:hover { color: #A27C52; }
+	    .foot-links-mobile a:active { color: #886239; position: relative; top: 1px; }
+
+
+	.inner-content { margin: 120px auto 0 auto; width: 300px; }
+	.inner-content2 { margin: 45px auto 0 auto; width: 100%; }
+		.option { display: none; }
+	.cupon { margin: 0 0 10px 0; max-width: 300px; }
+	.pattern-footer { position: relative; margin-top: 25px; }
+
+	.top-pattern { display: block; background: url(../img/top-pattern.png); background-position: top left; background-repeat: repeat-x; height: 55px; width: 100%; }
+
+
+	.cupon-deploy { background: none; border: none; width: 90%; margin: 40px 0 10px 0; }
+		.cupon-deploy-desktop { display: none; }
+		.cupon-deploy-mobile { display: block; }
+		.cupon-deploy-mobile h3 { color: #333; line-height: 1.1; margin: 7px 0; }
+			.resto-name { color: #666; font-size: 20px; font-weight: 700; margin: 0; }
+			.cupon-info { padding: 0; width: 100%; }
+				.food-img { position: relative; }
+			 	.cupon-info img { width: 100%; }
+			 	.over-img { max-width: 120px; position: absolute; right: 0px; top: 145px; z-index: 999; }
+			 	.medios-de-pago { width: 95%; }
+		.deploy-top-cupon { margin-top: -58px; margin-left: -20px; position: fixed; z-index: 9999; width: 100%; }
+
+		.resto-info { background-color: #FFDB9C; float: left; padding: 0 10px 20px 10px; width: 95%; }
+		.resto-info-pattern { background: url(../img/top-resto.png); background-repeat: repeat-x; background-position: top left; float: left; height: 19px; width: 100%; }
+		.resto-data a { display: block; }
+		.social-channels { float: left;  width: 100%; }
+		.cupon-code { width: 95%; }
+		.send-cupon { background-color: #FFC880; border-top: 1px solid #FFB055; float: left; margin-top: 10px; text-align: center; padding: 15px 10px; width: 95%; }
+			.send-cupon p { display: block; color: #876239; font-size: 22px; font-weight: 700; text-shadow: 0 1px #fff; text-decoration: none; }
+
+		.title-menu-deploy a, .help-icon a { color: #007A89; float: left; font-weight: 700; font-size: 20px; line-height: 1; margin-top: -33px; margin-left: 40%; text-decoration: none; width: auto; }
+		.help-icon a { margin-left: 93%; font-size: 22px;  }
+		.title-menu-deploy a:hover, .help-icon a:hover { color: #006168; }
+		.title-menu-deploy a:active, .help-icon a:active { color: #003F44; }
+
+
+		.resto-top-cupon { display: block; margin-top: 2px; position: fixed; z-index: 9999; }
+		.title-menu-resto p { color: #007A89; float: left; font-weight: 700; font-size: 20px; line-height: 1; margin-top: -30px; margin-left: 40%; text-decoration: none; width: auto; }
+		.title-menu-resto { margin-left: -3%; }
+		.margin-resto { margin-top: 55px !important; }
+		.background-resto { background-color: #F9F2E2 !important; }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width: 320px) {
+
+	body { padding-bottom: 0; }
+
+	#header { display: none; }
+	.navegation { display: none; }
+
+	/* NAVIGATION VISIBLE IN MOBILE */
+	.nav-mobile { display: block; padding: 5px 15px; border-bottom: 2px solid #fff; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+		background: rgba(255,255,255,1);
+		background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(222,222,222,1)));
+		background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(222,222,222,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dedede', GradientType=0 ); }
+
+	.collapse-mobile, .collapse-location { background: url(../img/pattern-footer.png) #F9F2E2; background-position: bottom; background-repeat: repeat-x;
+		left: 0; right: 0; bottom: 0; top: 47px; position: fixed; z-index: 99999; }
+
+	ul.collapse-nav { list-style: none; margin: 35px auto 0 auto; width: 90%; }
+	.collapse-nav li a { display: block; color: #949494; font-size: 22px; font-weight: 600; border-bottom: 1px dashed #D3B699; text-shadow: 0 2px #fff;
+		text-decoration: none; text-transform: uppercase; padding: 10px; }
+	.collapse-nav li a:hover { background-color: #EFE8DC; }
+	.collapse-nav li a:active { color: #828181; background-color: #EAE4D8; }
+
+		.icon-home { background: url(../img/home.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-help { background: url(../img/help.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-contact { background: url(../img/contacto.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-privacy { background: url(../img/privacy.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+		.icon-legal { background: url(../img/legal.png); background-repeat: no-repeat; background-position: right; float: right; height: 36px; width: 36px; }
+
+		.back-blue a img { margin: 7px 0 0 15px; }
+		.title-menu { margin-left: 22%; }
+		.title-menu2 { margin-left: 17%; }
+		.nav-right { float: right; }
+
+	form.form-mobile { margin-top: 70px; border-bottom: 1px dashed #D3B699; border-top: 1px dashed #D3B699; padding: 20px 0; }
+	/* END NAVIGATION VISIBLE IN MOBILE */
+
+
+
+	.title-cupones { font-size: 16px; line-height: 2.5; margin-top: 0; margin-left: 0; position: fixed; top: 47px; text-align: center; z-index: 9999; }
+	.amount { font-size: 16px; margin-left: 10px; border-radius: 25%; padding: 1px 8px; }
+
+
+	.location { display: none; }
+
+	.container { margin-top: 0;  width: 99%; }
+	.first-box { display: none; }
+	.box { width: 90%; margin-left: 5%; }
+		.button { margin-bottom: 0; }
+		.type-top p { margin-top: 10px; font-size: 13px; }
+	.campos-bottom { height: 30px; font-size: 18px; width: 92%; }
+	.middle { margin-top: 0; }
+
+	.panel-bottom { margin-top: 0; }
+		.panel-bottom-container { width: 90%; padding-top: 10px; text-align: left; }
+		.panel-bottom-container h3 { font-size: 20px }
+		p.subtitle-bottom { font-size: 13px; font-weight: 700; padding-top: 0 !important; }
+		.arrow-mobile { display: block; right: 5%; top: 40px; position: absolute; }
+
+			.beneficios-bottom { text-align: center; }
+			.beneficios-bottom p { font-size: 13px; margin-top: 25px; font-weight: 400 !important; }
+
+	.foot-links { display: none; }
+
+	.foot-links-mobile { color: #959595; clear: both; display: block; font-weight: 700; margin: 10px 0 20px 0; text-align: center; text-shadow: 0 1px #fff; width: 100%; }
+	    .foot-links-mobile a { color: #959595; font-size: 13px; text-shadow: 0 1px #fff; text-decoration: none; margin: 0 3px; }
+	    .foot-links-mobile a:hover { color: #A27C52; }
+	    .foot-links-mobile a:active { color: #886239; position: relative; top: 1px; }
+
+
+	.inner-content { margin-top: 120px; width: 100%; }
+	.inner-content2 { margin-top: 45px; width: 100%; }
+	.cupon { margin: -5px 0 0 0; max-width: 300px; }
+	.pattern-footer { position: relative; margin-top: 25px; }
+
+	.top-pattern { display: block; background: url(../img/top-pattern.png); background-position: top left; background-repeat: repeat-x; height: 55px; width: 100%; }
+
+
+	.cupon-deploy { background: none; border: none; width: 94%; margin: 40px 0 10px 0; padding: 10px; }
+		.cupon-deploy-desktop { display: none; }
+		.cupon-deploy-mobile { display: block; }
+		.cupon-deploy-mobile h3 { color: #333; font-size: 20px; font-weight: 800; line-height: 1.1; margin: 7px 0; }
+			.resto-name { color: #666; font-size: 16px; font-weight: 700; margin: 10px 0 0 0; }
+			.cupon-info {padding: 0; width: 100%; }
+				.food-img { position: relative; }
+			 	.cupon-info img { width: 100%; }
+			 	.over-img { max-width: 120px; position: absolute; right: 0px; top: 95px; z-index: 999; }
+			 	.medios-de-pago { width: 92%; }
+		.deploy-top-cupon { margin-top: -48px; margin-left: -10px; position: fixed; z-index: 9999; width: 100%; }
+
+		.details p { font-size: 14px; }
+		.resto-img { width: 82px; height: 82px; }
+			.resto-img img { width: 93%; }
+
+		.resto-info { background-color: #FFDB9C; float: left; padding: 0 5px 20px 5px; width: 96%; }
+		.resto-info-pattern { background: url(../img/top-resto.png); background-repeat: repeat-x; background-position: top left; float: left; height: 19px; width: 99.5%; }
+		.resto-data { margin-left: 87px; }
+			.resto-data a { display: block; }
+		.social-channels { float: left; width: 100%; }
+		.cupon-code { width: 92%; }
+		.send-cupon { background-color: #FFC880; border-top: 1px solid #FFB055; float: left; margin-top: 10px; text-align: center; padding: 15px 10px; width: 92%; }
+			.send-cupon p { display: block; color: #876239; font-size: 22px; font-weight: 700; text-shadow: 0 1px #fff; text-decoration: none; }
+
+
+		.title-menu-deploy a { margin-left: 35%; }
+		.help-icon a { margin-left: 93%; }
+
+		.resto-top-cupon { display: block; }
+		.title-menu-resto { margin-left: -13%; }
+
+}

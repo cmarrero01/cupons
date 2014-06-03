@@ -1,0 +1,270 @@
+
+html,
+button,
+input,
+select,
+textarea { color: #222; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+
+body { background-color: #FAF3E3; font-family: 'Open Sans', sans-serif; height: 100%; margin: 0; }
+
+html { height: 100%; }
+/* ==========================================================================
+   INDEX
+   ========================================================================== */
+
+/* HEADER */
+#header { background: url(../img/pattern.png ); background-position: top; background-repeat: repeat-x; height: 160px; width: 100%; } 
+    #header-center { width: 1000px; margin: 0 auto; } 
+    .figure-wrapp { margin: 0 auto; width: 1000px; } 
+        #figure { height: 124px; width: 250px; }
+            #figure img { margin-top: 15px; }
+        .left-figure { margin-left: 23%; }
+        .center-figure { margin: 0 auto; }
+
+/* PANEL DERECHO */
+.right-panel { position: fixed; top: 0; bottom: 0; right: 0; width: 35%; } 
+    .pattern  { background: url(../img/pattern-right.png); background-repeat: repeat-y; background-position: left; height: 100%; float: left; width: 21px; }
+    .panel { background-color: #4AEAFF; width: 100%; float: left; height: 100%; position: absolute; left: 20px; }
+        .panel-container { margin: 0 auto; padding: 15% 50px 15% 0; width: 45%; }
+        .panel-container h3, .panel-container p, .panel-container a { color: #085577; text-shadow: 0 1px #A9FFFD; }
+        .panel-container h3 { font-weight: 700; font-size: 23px; margin: 0; }
+        .panel-container p { margin: 0; font-size: 15px; font-weight: 400;  }
+        p.subtitle { font-weight: 600; margin: 5px 0 50px 0; }
+        .panel-container a { font-weight: 700; text-decoration: none; }
+
+        .beneficios { margin-bottom: 50px; }
+        .login p { margin-top: 30px; }
+
+.panel-bottom { display: none; }
+
+.container { margin: 30px auto 30px auto; width: 1000px; } 
+.top { margin-top: 130px; }
+    .box { float: left; width: 31%; padding: 10px 0; }
+    .box p { text-align: center; color: #886239; font-weight: 400; font-size: 15px; text-shadow: 0 1px #fff; }
+    .box-subtitle h3 { color: #666; font-weight: 700; font-size: 20px;margin: 0 0 10px 0; text-shadow: 0 1px #fff;}
+    .middle { margin: 0 3.5%; }
+        .middle-top { margin-top: 50px; }
+    .type-top p { float: left; margin-top: 28px; }
+
+    .arrow-mobile { display: none; }
+
+/* LINKS FOOTER INDEX */
+.foot-links { color: #959595; clear: both; float: left; font-weight: 700; margin-top: 22%; margin-bottom: 50px; text-align: center; text-shadow: 0 1px #fff; width: 64%; }
+    .foot-links a { color: #959595; text-shadow: 0 1px #fff; text-decoration: none; letter-spacing: 1px; margin: 0 10px; }
+    .foot-links a:hover { color: #A27C52; }
+    .foot-links a:active { color: #886239; position: relative; top: 1px; }
+
+.foot-links-mobile { display: none; }
+
+
+/* FORM */
+.selector, .campos { background-color: #FFEAC8; border: 1px solid #EFBE70; }
+.selector, .button, .campos { color: #A27C52; display: block; cursor: pointer; float: left; font-size: 18px; height: 40px; margin-bottom: 10px; padding: 5px 10px; width: 100%; }
+.button { background-color: #FFDC9D; border: 1px solid #FFDC9D; border-bottom: 3px solid #FFC981; font-weight: 700; font-size: 20px; margin-top: 5px; text-shadow: 0 1px #FAF3E3; }
+    .button:hover { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; }
+    .button:active { background-color: #FFCE80; border: 1px solid #FFCE80; border-bottom: 3px solid #FFB966; color: #886239; position: relative; top: 2px; }
+
+.campos { height: 30px; font-size: 18px; width: 94%; }
+    .campos:focus { background-color: #FFE1B6; }
+
+input::-webkit-input-placeholder { color: #C2986D; font-size: 18px; font-weight: 300; }
+input:-moz-placeholder { color: #C2986D; font-size: 18px; font-weight: 300; }
+
+
+
+/* ==========================================================================
+   CUPONES DE HOY
+   ========================================================================== */
+
+.navegation { background-color: #0CD5EF; height: 40px; width: 100%; }
+    .navegation-center { margin: 20px auto; width: 1000px; }
+    .navegation-center ul { list-style: none; text-align: center; width: 760px; margin: 0 auto; }
+        .navegation-center li { float: left; }
+        .navegation-center li a { color: #fff; font-weight: 700; line-height: 2.5; margin: 10px 1px 0 1px; padding: 9px 39px; text-transform: uppercase; text-decoration: none; }
+        .navegation-center li a:hover { background-color: #05B0D8; }
+        .navegation-center li a:active { background-color: #0C92B8; }
+
+
+.sub-nav { margin-bottom: 15px; width: 100%; }
+    .title-cupones { display: block; color: #754C24; font-size: 25px; font-weight: 800; float: left; }
+        .amount { background-color: #FF828B; border-left: 2px solid #F86073; border-bottom: 2px solid #F86073; border-radius: 10%; color: #fff; font-size: 20px; 
+            font-weight: 600; margin-left: 10px; padding: 2px 10px; }
+    .location { display: none; }
+        /* Tooltip with css3 */
+        a.tooltips { position: relative; float: right; display: inline; }
+        a.tooltips span { position: absolute; width: 210px; color: #fff; background: #13C5E4; font-weight: 600; text-shadow: 0 1px #047089; height: 30px; line-height: 30px; 
+            text-align: center; visibility: hidden; border-radius: 6px; }
+        a.tooltips span:after { content: ''; position: absolute; top: 50%; left: 100%; margin-top: -8px; width: 0; height: 0; border-left: 8px solid #13C5E4; 
+            border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+        a:hover.tooltips span { visibility: visible; opacity: 0.8; right: 100%; top: 50%; margin-top: -15px; margin-right: 15px; z-index: 999; }
+
+
+.cupon { background-color: #fff; border-bottom: 2px solid #F4DECB; display: inline-block; margin: 0 20px 10px 0; height: 113px; position: relative; width: 310px; }
+    .cupon:hover { background-color: #FCFCFC; }
+    .cupon:active { background-color: #fff; position: relative; top: 2px; }
+
+    .image-container { left: 0; height: 113px; position: absolute; width: 110px; }
+        .image { float: left; height: 90px; width: 110px; }
+        .coupon-amount { float: left; height: 20px; width: 110px; }
+        .circle-left { background: url(../img/circle-left.png); background-position: left; height: 39px; position: absolute; top: 33px; width: 20px; }
+
+            /* CLASES PARA INDICAR LA CANTIDAD DE CUPONES QUE QUEDAN */
+            .last-coupon, .quince, .mas-de-quince, .menos-de-quince { font-size: 13px; font-weight: 700; text-transform: uppercase; text-align: center; width: 100%; }
+                .last-coupon { background-color: #FF828B; border-top: 3px solid #F86073; color: #fff; text-shadow: 0 2px #F86073; }
+                .mas-de-quince { background-color: #FFD597; border-top: 3px solid #D4B79A; color: #666; }
+                .menos-de-quince { background-color: #3FA5F1; border-top: 3px solid #0071B8; color: #fff; }
+
+    .description { float: left; margin-left: 120px; }
+        .restaurant-name { color: #959595; font-weight: 700; font-size: 14px; margin: 5px 5px 5px 0; }
+        .descuento p { color: #333333; font-weight: bold; font-size: 16px; line-height: 1; text-align: left; margin: 6px 5px 7px 0; }
+        .tarjetas { float: left; margin: 6px 5px 1px 0; }
+            .tarjetas img { margin-right: 8px; }        
+
+
+
+.pattern-footer { background: url(../img/pattern-footer.png); background-position: left bottom; background-repeat: repeat-x; bottom: 0; height: 45px; position: fixed; width: 100%; }
+
+
+/* NAVIGATION MOBILE */
+.nav-mobile, .collapse-mobile, .top-pattern, .collapse-mobile, .collapse-location, .head-mobile { display: none; }
+
+
+
+/* ==========================================================================
+   CUPON DEPLOY
+   ========================================================================== */
+.cupon-deploy { background-color: #FFE9C7; border: 1px solid #FFDB9C; float: left; margin: 10px 2% 80px 0; width: 61%; padding: 20px; }
+.cupon-deploy h3 { color: #603813; font-weight: 700; font-size: 25px; margin: 20px 0 0 0; text-shadow: 0 1px #fff; }
+
+    .option ul { list-style: none; margin: 0 auto 10px auto; width: 520px; }
+    .option li a { display: block; color: #fff; float: left; font-size: 18px; font-weight: 700; line-height: 1.5; margin-left: 1px; text-decoration: none; padding: 10px 15px; text-shadow: 0 1px #B77602; }
+        .icon-descarga { background: url(../img/descargar.png); background-repeat: no-repeat; background-position: right; margin: -40px 0 0 10px; float: right; height: 40px; width: 36px; }
+        .icon-email { background: url(../img/email.png); background-repeat: no-repeat; background-position: right; margin: -43px 0 0 10px; float: right; height: 40px; width: 36px; }
+            /* HACK PARA FIREFOX */
+            @-moz-document url-prefix() {
+                .icon-descarga {
+                    margin: -14px 0 0 10px; 
+                }
+            }
+            @-moz-document url-prefix() {
+                .icon-email {
+                    margin: -14px 0 0 10px; 
+                }
+            }
+
+        li.orange a { background-color: #FDC13F; }
+        li.orange a:hover { background-color: #EDA71D; } 
+        li.orange a:active { background-color: #DB8C00; } 
+
+        li.blue-arrow a { background-color: #0CD4EE; }
+        li.blue-arrow a:hover { background-color: #02C4D3; }
+        li.blue-arrow a:active { background-color: #0BB1B5; }
+        li.blue-arrow img { margin-top: -6px; margin-bottom: -7px; }
+
+    .details p { color: #603813; font-weight: 400; font-size: 16px; margin: 10px 0; text-shadow: 0 1px #fff; }
+    .resto-info { background-color: #FFDB9C; float: left; padding: 0 10px; width: 46%; }
+        .resto-title { color: #603813; font-weight: 700; font-size: 18px; margin: 10px 0; text-shadow: 0 1px #fff; position: relative; }
+
+        .resto-details { float: left; }
+            .resto-img { background-color: #fff; border: 1px solid #FFCE80; height: 86px; width: 86px; position: absolute;  }
+                .resto-img img { margin: 3px 0 0 3px; }
+
+            .resto-data { border-left: 1px solid #D3B699; float: left; margin-left: 95px; position: relative; padding: 0 7px; }
+            .resto-data p { color: #876239; font-size: 13px; font-weight: 600; margin: 0; line-height: 1.1; }
+            .resto-data a { color: #876239; font-size: 13px; font-weight: 700; float: left; margin: 6px 0; text-decoration: none; text-shadow: 0 1px #fff; }
+            .resto-data a:hover { color: #603813; }
+            .resto-data a:active { color: #876239; }
+                .social-channels { float: left; }
+                    .twitter { background: url(../img/twitter.jpg); ; background-repeat: no-repeat; float: left; margin-right: 10px; height: 30px; width: 30px; }
+                    .facebook { background: url(../img/facebook.jpg); ; background-repeat: no-repeat; float: left; margin-right: 10px; height: 30px; width: 30px; }
+                    .gplus { background: url(../img/gplus.jpg); ; background-repeat: no-repeat; float: left; height: 30px; width: 30px; }
+
+                    .twitter:hover, .facebook:hover, .gplus:hover { opacity: 0.9; }
+                    .twitter:active, .facebook:active, .gplus:active { opacity: 1; position: relative; top: 2px; }        
+
+
+                .medios-de-pago { background-color: #FFE9C7; border: 1px solid #FFCE80; float: left; margin: 10px 0; padding: 10px; width: 91%; }
+                    .medios-de-pago h4 { color: #666; font-size: 16px; font-weight: 700; margin: 0; text-shadow: 0 1px #fff; }
+                    .medios-de-pago img { float: left; margin: 10px 5px 0 0; }
+
+    .cupon-info { float: left; padding: 5px 10px; width: 46%; position: relative; }
+        .over-img { max-width: 120px; position: absolute; right: -8px; top: 111px; z-index: 999; }
+        .cupon-code { background-color: #4AE9FF; border-bottom: 4px solid #13C5E4; float: left; margin-top: 10px; padding: 10px; text-align: center; width: 100%; }
+            .valido { color: #007A89; font-size: 14px; font-weight: 600; text-shadow: 0 1px #fff; }
+            .code { color: #007A89; font-size: 20px; font-weight: 600; margin-top: 10px; text-shadow: 0 1px #fff; }
+
+
+
+.cupon-deploy-mobile { display: none; }
+
+
+
+
+/* ==========================================================================
+   RESTAURANTES
+   ========================================================================== */
+
+.ubicacion h3 { color: #603813; font-weight: 700; font-size: 18px; margin: 0 0 10px 0; text-shadow: 0 1px #fff; position: relative; }
+.mapa { background-color: #fff; border: 1px solid #FFDB9C; padding: 5px; width: 281px; height: 196px; }
+    .mapa img { width: 100%; }
+
+.breve-descripcion { float: left; width: 100%; }
+    .breve-descripcion h3 { color: #603813; font-weight: 700; font-size: 18px; margin: 20px 0 10px 0; text-shadow: 0 1px #fff; position: relative; }
+    .breve-descripcion p { color: #603813; font-weight: 400; font-size: 16px; margin: 10px 0; text-shadow: 0 1px #fff; position: relative; }
+
+.resto-top-cupon { display: none; }
+
+/* ==========================================================================
+   SEND TO MY FRIENDS
+   ========================================================================== */
+.sendToMyFriendForm{ position: fixed; z-index: 9999999; top: 0; left: 0; right: 0; bottom: 0;}
+.sendToMyFriendForm .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#FFFFFF;
+    opacity: 0.5;
+}
+.sendToMyFriendForm .sendToMyFriendForm-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    height: 150px;
+    margin-top: -35px;
+    background-color: #FFDB9C;
+    padding: 20px;
+    text-align: center;
+}
+.sendToMyFriendForm .sendToMyFriendForm-form .emailFriend{
+    width: 200px;
+    height: 30px;
+    font-size: 12px;
+    padding: 5px;
+}
+.sendToMyFriendForm .sendToMyFriendForm-form h3{ margin-top: 0;}
+.sendToMyFriendForm .sendToMyFriendForm-form .inputFriend{
+    height: 40px;
+    padding: 5px;
+    width: 70px;
+    margin-top: 10px;
+}
+.terms{
+    text-decoration: none;
+    color:#003F44;
+}
+#terms{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    top: 20px;
+    margin-left: -120px;
+    background-color: #dcdcdc;
+    padding: 20px;
+}

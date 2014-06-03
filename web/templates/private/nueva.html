@@ -1,0 +1,84 @@
+{{> header}}
+<div class="container bs-docs-container" id="body">
+    <div class="page-header">
+        <h1>Nueva Oferta</h1>
+    </div>
+    <div class="list-group">
+        <form role="form" enctype="multipart/form-data" action="/myAccount/oferta/save" method="post">
+            <input type="hidden" value="{{accountId}}" id="accountId" name="accountId" />
+            <div class="form-group">
+                <label for="name">Nombre de la oferta:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre que le daras al cupon">
+            </div>
+            <div class="form-group">
+                <label for="description">Texto Promocional:</label>
+                <textarea class="form-control" id="description" name="description" placeholder="Texto promocional"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="quantity">Cantidad de cupones:</label>
+                        <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Cantidad de cupones">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="expireDate">Fecha que expira: (mm/dd/yy)</label>
+                        <input type="text" class="form-control" id="expireDate" name="expireDate" placeholder="Determine la fecha en la que el cupon dejara de ser valido">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>En que dias se habilita la oferta</h3>
+                    <div class="checkbox">
+                        <label class="checkbox-inline" for="Lunes">
+                            <input type="checkbox" id="Lunes" value="Lunes" name="Lunes" /> Lunes
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Martes">
+                            <input type="checkbox" id="Martes" value="Martes" name="Martes" /> Martes
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Miercoles">
+                            <input type="checkbox" id="Miercoles" value="Miercoles" name="Miercoles" /> Miercoles
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Jueves">
+                            <input type="checkbox" id="Jueves" value="Jueves" name="Jueves" /> Jueves
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Viernes">
+                            <input type="checkbox" id="Viernes" value="Viernes" name="Viernes" /> Viernes
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Sabado">
+                            <input type="checkbox" id="Sabado" value="Sabado" name="Sabado" /> Sabado
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label class="checkbox-inline"  for="Domingo">
+                            <input type="checkbox" id="Domingo" value="Domingo" name="Domingo" /> Domingo
+                        </label>
+                    </div>
+                </div><!-- /end col social -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h3>Imagen que represente la oferta</h3>
+                        <div class="form-group">
+                            <label for="image">Subir imagen: (Solo extensiones jpg o bmp) Tamaño maximo: 298 x 127 px</label>
+                            <input type="file" id="image" name="image" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Crear Oferta</button>
+        </form>
+    </div>
+</div>
+{{> footer}}

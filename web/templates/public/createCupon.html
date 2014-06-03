@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Il Cupone</title>
+    <link rel="stylesheet" href="/private/css/bootstrap.min.css">
+    <script src="/private/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+</head>
+<body style="overflow: hidden; width:335px;">
+<!-- CONTAINER -->
+<div class="container clearfix" id="body" style="margin: 0 !important; padding: 0 !important; width: 100%;">
+
+        <!-- MOBILE VISTA -->
+        <div class="top-pattern deploy-top-cupon" style="position:relative !important; width: 100% !important; height: 65px; margin: 0 !important;">
+
+        </div>
+        <div class="cupon-deploy-mobile clearfix">
+            <div class="cupon-info">
+                <div class="food-img">
+                    <img src="/image/business/{{oferta.accountId}}/{{oferta._id}}/cupon.jpg" width="298" height="127">
+                </div>
+            </div>
+            <div class="clearfix">
+                <h5 class="resto-name">{{business.name}}</h5>
+            </div>
+            <h3>{{oferta.name}}</h3>
+            <div class="details">
+                <p>{{oferta.description}}</p>
+            </div>
+            <div class="medios-de-pago">
+                <h4>Medios de Pago</h4>
+                <img src="/static/img/efectivo.png">
+                <img src="/static/img/visa.jpg">
+                <img src="/static/img/master.jpg">
+            </div>
+            <div class="resto-info-pattern"></div>
+            <div class="resto-info clearfix" style="margin-left:0 !important; margin-right:0 !important; padding-left:0 !important; padding-right:0 !important; width: 100%;">
+                <div class="resto-title">
+                    {{business.name}}
+                </div>
+                <div class="resto-details">
+                    <div class="resto-img">
+                        <img src="/image/business/{{oferta.accountId}}/business.jpg" width="80" height="80">
+                    </div>
+                    <div class="resto-data">
+                        <p>{{business.address}}. Tel: {{business.phone}}</p>
+                        <a href="#">{{business.web}}</a>
+                        <div class="social-channels">
+                            <a href="#"><div class="twitter"></div></a>
+                            <a href="#"><div class="facebook"></div></a>
+                            <a href="#"><div class="gplus"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cupon-code" style="margin-left:0 !important; margin-right:0 !important; padding-left:0 !important; padding-right:0 !important; width: 100%;">
+                <div class="valido">
+                    <strong>Válido el día</strong> {{#oferta.daysEnabled}}{{.}}, {{/oferta.daysEnabled}}
+                </div>
+                <div class="code">
+                    Expira el: <br />{{oferta.expireDate}}
+                </div>
+            </div>
+            <a href="#" >
+                <div class="send-cupon" style="margin-left:0 !important; margin-right:0 !important; padding-left:0 !important; padding-right:0 !important; width: 100%;">
+                    <h3>Cupon Code:</h3>
+                    <p>{{code}}</p>
+                </div>
+            </a>
+        </div><!-- end cupon-deploy-mobile -->
+
+</div><!-- end cupon-deploy -->
+
+</body>
+</html>

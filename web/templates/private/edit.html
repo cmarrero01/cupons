@@ -1,0 +1,59 @@
+{{> header}}
+<div class="container bs-docs-container" id="body">
+    <div class="page-header">
+        <h1>Editar Cupon</h1>
+    </div>
+    <div class="list-group">
+        <form role="form" enctype="multipart/form-data" action="/myAccount/oferta/save" method="post">
+            <input type="hidden" value="{{oferta.accountId}}" id="accountId" name="accountId" />
+            <input type="hidden" value="{{oferta._id}}" id="cuponId" name="cuponId" />
+            <div class="form-group">
+                <label for="name">Nombre de la oferta:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{oferta.name}}" placeholder="Nombre que le daras al cupon">
+            </div>
+            <div class="form-group">
+                <label for="description">Texto Promocional:</label>
+                <textarea class="form-control" id="description" name="description" placeholder="Texto promocional">{{oferta.description}}</textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="quantity">Cantidad de cupones:</label>
+                        <input type="text" class="form-control" id="quantity" name="quantity" value="{{oferta.quantity}}" placeholder="Cantidad de cupones">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="expireDate">Fecha que expira: (dd/mm/yy)</label>
+                        <input type="text" class="form-control" id="expireDate" name="expireDate" value="{{oferta.expireDate}}" placeholder="Determine la fecha en la que el cupon dejara de ser valido">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>En que dias se habilita la oferta</h3>
+                    {{#oferta.daysList}}
+                    <div class="checkbox">
+                        <label class="checkbox-inline" for="{{day}}">
+                            <input type="checkbox" id="{{day}}" value="{{day}}" name="{{day}}" {{#enabled}}checked="checked"{{/enabled}} /> {{day}}
+                        </label>
+                    </div>
+                    {{/oferta.daysList}}
+
+                </div><!-- /end col social -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <h3>Imagen que represente la oferta</h3>
+                        <div class="form-group">
+                            <label for="image">Subir imagen: (Solo extensiones png o bmp)</label>
+                            <input type="file" id="image" name="image" />
+                            <img src="/image/business/{{oferta.accountId}}/{{oferta._id}}/cupon.jpg" alt="Imagen cupon" class="img-thumbnail" width="298">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Editar Oferta</button>
+        </form>
+    </div>
+</div>
+{{> footer}}

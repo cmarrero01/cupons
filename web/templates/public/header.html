@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ilCupone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHg9RKz5CCZf6Q9aeFSRoX6cTRCUT01xc&sensor=true"></script>
+
+    <script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/mustache/mustache.js"></script>
+    <script src="/static/js/gmaps.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+    <div id="header-center">
+        <div class="figure-wrapp">
+            <div id="figure" class="center-figure">
+                <a href="/">
+                    <img src="/static/img/logo.png" alt="ilCupone">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END HEADER -->
+
+
+<!-- NAVEGACIÓN -->
+<div class="navegation">
+    <div class="navegation-center">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/ayuda">Ayuda</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="/privacidad">Privacidad</a></li>
+            <li><a href="/legales">Legales</a></li>
+        </ul>
+    </div>
+</div>
+<!-- END NAVEGACIÓN -->
+
+
+<!-- NAVEGACIÓN MOBILE-->
+<div class="nav-mobile">
+    <a href="#" class="nav-left"><img src="/static/img/nav-left.png"></a>
+    <a href="#" class="nav-right"><img src="/static/img/nav-right.png"></a>
+</div>
+<div class="collapse-mobile">
+    <div class="top-collapse top-pattern ">
+                <span class="back-blue">
+                    <a href="#"><img src="/static/img/back-blue.png"></a>
+                </span>
+                <span class="title-menu">
+                    <img src="/static/img/menu-blue.png">
+                </span>
+    </div>
+    <ul class="collapse-nav">
+        <li><a href="/">Home<div class="icon-home"></div></a></li>
+        <li><a href="/ayuda">Ayuda<div class="icon-help"></div></a></li>
+        <li><a href="/contacto">Contacto<div class="icon-contact"></div></a></li>
+        <li><a href="/privacidad">Privacidad<div class="icon-privacy"></div></a></li>
+        <li><a href="/legales">Legales<div class="icon-legal"></div></a></li>
+    </ul>
+</div>
+
+<div class="collapse-location">
+    <div class="top-collapse top-pattern ">
+                <span class="back-blue">
+                    <a href="#"><img src="/static/img/back-blue.png"></a>
+                </span>
+                <span class="title-menu2">
+                    <img src="/static/img/ubicacion.png">
+                </span>
+    </div>
+    <ul class="collapse-nav">
+        <form class="form form-mobile clearfix" action="/ofertas/0/10">
+            <select class="selector">
+                <option value="0">Mendoza</option>
+            </select>
+            <button type="submit" class="button">Buscar Cupón</button>
+        </form>
+    </ul>
+</div>
+<!-- END NAVEGACIÓN MOBILE -->

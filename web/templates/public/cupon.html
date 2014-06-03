@@ -1,0 +1,155 @@
+{{> header}}
+<!-- CONTAINER -->
+<div class="container clearfix" id="body">
+
+    <div class="inner-content2">
+        <div class="cupon-deploy">
+
+            <!-- DESKTOP Y TABLETS VISTA -->
+            <div class="cupon-deploy-desktop">
+                <div class="option clearfix">
+                    <ul>
+                        <li class="blue-arrow"><a href="javascript:history.back(1)"><img src="/static/img/back-blue.png"></a></li>
+                        <li class="orange"><a href="/download/{{oferta._id}}">Descargar Cupón <div class="icon-descarga"></div></a></li>
+                        <li class="orange"><a href="#" class="sendToMyFriend">Enviar a un amigo <div class="icon-email"></div></a></li>
+                    </ul>
+                </div>
+                <h3>{{oferta.name}}</h3>
+                <div class="details">
+                    <p>{{oferta.description}}</p>
+                </div>
+                <div class="resto-info clearfix">
+                    <div class="resto-title">
+                        {{business.name}}
+                        <a href="/business/{{business._id}}"> &raquo; Ampliar info</a>
+                    </div>
+                    <div class="resto-details">
+                        <div class="resto-img">
+                            <img src="/image/business/{{oferta.accountId}}/business_80x80.jpg" width="80" height="80">
+                        </div>
+                        <div class="resto-data">
+                            <p>{{business.address}}. Tel: {{business.phone}}</p>
+                            <a href="{{business.web}}">{{business.web}}</a>
+                            <div class="social-channels">
+                                <a href="{{business.social.twitter}}"><div class="twitter"></div></a>
+                                <a href="{{business.social.facebook}}"><div class="facebook"></div></a>
+                                <!--<a href="{{business.social.google}}"><div class="gplus"></div></a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cupon-info">
+                    <div class="food-img">
+                        <img src="/image/business/{{business.accountId}}/{{oferta._id}}/cupon_298x127.jpg" width="298" height="127">
+                        <div class="last-coupon over-img">
+                            Quedan {{oferta.quantity}}
+                        </div>
+                    </div>
+                    <div class="cupon-code">
+                        <div class="valido">
+                            <strong>Válido los dias</strong> {{#oferta.daysEnabled}}{{.}}, {{/oferta.daysEnabled}}
+                        </div>
+                        <div class="code">
+                            Expira el: <br />{{oferta.expire.day}}/{{oferta.expire.month}}/{{oferta.expire.year}}
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end cupon-deploy-desktop -->
+
+
+
+            <!-- MOBILE VISTA -->
+           <div class="top-pattern deploy-top-cupon">
+                <span class="back-blue">
+                    <a href="javascript:history.back(1)"><img src="/static/img/back-blue.png"></a>
+                </span>
+                <div class="title-menu-deploy">
+                    <a href="/download/{{oferta._id}}">Descargar</a>
+                </div>
+                <div class="help-icon">
+                    <a href="#">?</a>
+                </div>
+            </div>
+            <div class="cupon-deploy-mobile clearfix">
+                <div class="cupon-info">
+                    <div class="food-img">
+                        <img src="/image/business/{{oferta.accountId}}/{{oferta._id}}/cupon_298x127.jpg" width="298" height="127">
+                        <div class="last-coupon over-img">
+                            Quedan {{oferta.quantity}}
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <h5 class="resto-name">{{business.name}}</h5>
+                </div>
+                <h3>{{oferta.name}}</h3>
+                <div class="details">
+                    <p>{{oferta.description}}</p>
+                </div>
+                <!--<div class="medios-de-pago">
+                    <h4>Medios de Pago</h4>
+                    <img src="/static/img/efectivo.png">
+                    <img src="/static/img/visa.jpg">
+                    <img src="/static/img/master.jpg">
+                </div>-->
+                <div class="resto-info-pattern"></div>
+                <div class="resto-info clearfix">
+                    <div class="resto-title">
+                        {{business.name}}
+                        <a href="/business/{{business._id}}"> &raquo; Ampliar info</a>
+                    </div>
+                    <div class="resto-details">
+                        <div class="resto-img">
+                            <img src="/image/business/{{oferta.accountId}}/business_80x80.jpg" width="80" height="80">
+                        </div>
+                        <div class="resto-data">
+                            <p>{{business.address}}. Tel: {{business.phone}}</p>
+                            <a href="{{business.web}}">{{business.web}}</a>
+                            <div class="social-channels">
+                                <a href="{{business.social.twitter}}"><div class="twitter"></div></a>
+                                <a href="{{business.social.facebook}}"><div class="facebook"></div></a>
+                                <!--<a href="{{business.social.google}}"><div class="gplus"></div></a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cupon-code">
+                    <div class="valido">
+                        <strong>Válido el día</strong> {{#oferta.daysEnabled}}{{.}}, {{/oferta.daysEnabled}}
+                    </div>
+                    <div class="code">
+                        Expira el: <br />{{oferta.expire.day}}/{{oferta.expire.month}}/{{oferta.expire.year}}
+                    </div>
+                </div>
+                <a href="#" class="sendToMyFriend">
+                    <div class="send-cupon">
+                        <p>Enviar a un amigo</p>
+                    </div>
+                </a>
+            </div><!-- end cupon-deploy-mobile -->
+
+        </div><!-- end cupon-deploy -->
+
+        <div class="box box-hidden" id="suggestCupons">
+            {{> sidebar}}
+        </div>
+    </div>
+
+    <div class="sendToMyFriendForm" {{^sended}}style="display: none;"{{/sended}}>
+        <div class="overlay"></div>
+        <form action="/enviar/a/un/amigo" method="post" class="sendToMyFriendForm-form">
+            {{#sended}}
+            <h3>Sugerencia enviada...</h3>
+            {{/sended}}
+            <h3>Envia este cupon a un amigo:</h3>
+            <input type="hidden" value="{{oferta._id}}" name="cpId" />
+            <input type="email" name="email" value="" placeholder="Coloca el email de un amgio" class="emailFriend">
+            <input type="submit" value="Enviar" name="sendToMyFriend" class="inputFriend">
+        </form>
+    </div>
+</div>
+
+
+<!-- END CONTAINER -->
+{{> footer}}

@@ -1,0 +1,28 @@
+<div class="box-subtitle">
+    <h3>Más cupones</h3>
+</div>
+{{#suggest}}
+<div class="cupon">
+    <a href="/oferta/{{_id}}" class="theCupon" data-cuponid="{{_id}}">
+        <div class="image-container">
+            <div class="image">
+                <img src="/image/business/{{accountId}}/{{_id}}/cupon.jpg" alt="Imagen cupon" class="img-thumbnail" width="110" height="110">
+            </div>
+            <div class="circle-left"></div>
+            <div class="coupon-amount last-coupon">
+                Quedan {{quantity}}
+            </div>
+        </div>
+        <div class="description">
+            <div class="restaurant-name">
+                {{name}}
+            </div>
+            <!--<div class="tarjetas">
+                <img src="/static/img/efectivo.png">
+                <img src="/static/img/visa.jpg">
+                <img src="/static/img/master.jpg">
+            </div>-->
+        </div>
+    </a>
+</div><!-- end cupon-->
+{{/suggest}}

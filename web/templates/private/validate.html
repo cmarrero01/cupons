@@ -1,0 +1,42 @@
+{{> header}}
+<div class="container bs-docs-container" id="body">
+    <div class="page-header">
+        <h1>Validar Cupon</h1>
+    </div>
+    <div class="list-group">
+        <form role="form" enctype="multipart/form-data" action="/myAccount/oferta/cupon/validate/" method="get" id="validateCP">
+            <div class="form-group">
+                <label for="code">Codigo de cupon:</label>
+                <input type="text" class="form-control" id="code" name="code" placeholder="Coloque aqui el codigo de cupon para validar">
+                <button type="submit" class="btn btn-primary btn-block">Validar</button>
+            </div>
+        </form>
+        <div class="inner-content" id="validateResult" style="display: none">
+            <div class="alert alert-info">
+                <p>
+                    El Cupon es Valido
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            $(document).delegate('#validateCP','submit',function(){
+                var $this = $(this);
+                var url = $this.attr('action');
+                var code = $('#code').val();
+                var $result = $('#validateResult');
+
+                $.getJSON(url+code,function(r){
+                    if(r.response){
+                        $('#validateResult .alert p').html('El cupon es valido');
+                        $('#validateResult').show();
+                    }else{
+                        $('#validateResult').show();
+                        $('#validateResult .alert p').html('El cupon <strong>NO</strong> es valido');
+                    }
+                });
+                return false;
+            });
+        </script>
+{{> footer}}

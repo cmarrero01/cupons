@@ -1,0 +1,50 @@
+{{> header}}
+<div class="container bs-docs-container" id="body">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                <ul class="nav bs-sidenav" id="subMenu">
+                    <li><a href="/myAccount/oferta/validar/">Validar Cupon</a> </li>
+                    <li><a href="/myAccount/oferta/nueva/">Nueva Oferta</a> </li>
+                    <li><a href="/myAccount/ofertas/Activa" id="ofertasActivas">Ofertas activas</a> </li>
+                    <li><a href="/myAccount/ofertas/Cerrada" id="ofertasCerradas">Ofertas Cerradas</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-9" role="main" id="ofertsContainer">
+            <div class="page-header">
+                <h1>Ofertas Activas</h1>
+            </div>
+            <div class="list-group" id="cuponActive">
+                {{#ofertas}}
+                <a href="/myAccount/oferta/editar/{{_id}}" class="list-group-item cupones">
+                    <h4 class="list-group-item-heading">{{name}}
+                        {{#showButton}}<button class="btn btn-danger closeCupon" data-cuponid="{{_id}}"><i class="glyphicon glyphicon-remove-sign"></i> Terminar cupon</button>{{/showButton}}</h4>
+                    <div class="pull-left">
+                        <img src="/image/business/{{accountId}}/{{_id}}/cupon.jpg" alt="Imagen cupon" class="img-thumbnail" width="150">
+                        </div>
+                    <p class="list-group-item-text">
+                        {{description}}
+                    </p>
+                    <p class="list-group-item-text">Valido los dias: <strong>{{#daysEnabled}} {{.}}, {{/daysEnabled}}</strong></p>
+                    <p class="list-group-item-text">Cantidad restante: <strong>{{quantity}}</strong></p>
+                    <p class="list-group-item-text">Termina el dia: <strong>{{expireDate}}</strong></p>
+                    <div class="clearfix"></div>
+                    </a>
+                {{/ofertas}}
+            </div>
+        </div>
+    </div>
+</div>
+        <script>
+            $(document).ready(function(){
+                $(document).delegate('.closeCupon','click',function(){
+                    var $this = $(this);
+                    var cpId = $this.data('cuponid');
+                    window.location = '/myAccount/oferta/cerrar/'+cpId;
+                    return false;
+                });
+            });
+        </script>
+{{> footer}}

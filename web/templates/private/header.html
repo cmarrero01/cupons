@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Il Cupone</title>
+
+    <link rel="stylesheet" href="/private/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/private/css/main.css">
+    <link rel="stylesheet" href="/private/css/custom.css">
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHg9RKz5CCZf6Q9aeFSRoX6cTRCUT01xc&sensor=true">
+    </script>
+
+    <script src="/private/js/jquery-1.10.2.min.js"></script>
+    <script src="/private/js/mustache/mustache.js"></script>
+    <script src="/private/js/gmaps.js"></script>
+    <script src="/private/js/bootstrap.min.js"></script>
+    <script src="/private/js/jquery.cookie.js"></script>
+
+
+</head>
+<body>
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">IlCupone</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/myAccount">Mi Negocio</a></li>
+                    <li><a href="/myAccount/ofertas/Activa" id="ofertas">Mis Ofertas</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/logout">Cerrar sesión</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</header>
+
+<div class="bs-header">
+    <div class="container">
+        <h1>Acerca tus ofertas</h1>
+        <p>
+            Ahora con Ilcupone puedes llegar a todos tus clientes de forma rapida y directa, completa tus ofertas y
+            comienza a publicar.
+        </p>
+    </div>
+</div>
+
+<div class="bs-old-docs">
+    <div class="container">
+        <strong>Dudas y sugerencias?</strong> Comunicate con nosotros a <a href="#">contacto@ilcupone.com</a>
+    </div>
+</div>
